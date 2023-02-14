@@ -72,6 +72,8 @@ def compute_data_choice_2(df):
 
 # Application layout
 app.layout = html.Div(children=[ 
+                                # TASK1: Add title to the dashboard
+                                # Enter your code below. Make sure you have correct formatting.
                                html.H1('US Domestic Airline Flights Performance',
                                style={'textAlign': 'center', 'color': '#503D36', 'font-size': 24}),
     
@@ -86,6 +88,8 @@ app.layout = html.Div(children=[
                                             html.H2('Report Type:', style={'margin-right': '2em'}),
                                             ]
                                         ),
+                                        # TASK2: Add a dropdown
+                                        # Enter your code below. Make sure you have correct formatting.
                                         dcc.Dropdown(id='input-type', 
                    options=[
                            {'label': 'Yearly Airline Performance Report', 'value': 'OPT1'},
@@ -116,13 +120,17 @@ app.layout = html.Div(children=[
                                 
                                 # Add Computed graphs
                                 # REVIEW3: Observe how we add an empty division and providing an id that will be updated during callback
+  
                                 html.Div([ ], id='plot1'),
     
                                 html.Div([
                                         html.Div([ ], id='plot2'),
                                         html.Div([ ], id='plot3')
                                 ], style={'display': 'flex'}),
-                                
+  
+                                # TASK3: Add a division with two empty divisions inside. See above disvision for example.
+                                # Enter your code below. Make sure you have correct formatting.
+  
                                 html.Div([
                                         html.Div([ ], id='plot4'),
                                         html.Div([ ], id='plot5')
@@ -131,7 +139,9 @@ app.layout = html.Div(children=[
                                 ])
 
 # Callback function definition
-# Task4
+# TASK4: Add 5 ouput components
+# Enter your code below. Make sure you have correct formatting.
+
 @app.callback([Output(component_id='plot1', component_property='children'),
                 Output(component_id='plot2', component_property='children'),
                 Output(component_id='plot3', component_property='children'),
